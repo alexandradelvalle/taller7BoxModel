@@ -1,0 +1,259 @@
+/* ===== Variables ===== */
+
+:root {
+  --fondo: #233247;
+  --tarjeta: #F4F6F2;
+  --tinta: #16233A;
+  --gris: #5B6B7E;
+  --linea: #D5DCD6;
+  --amarillo: #F2C230;
+  --azul: #1F4E9C;
+  --rojo: #C8312F;
+  --verde: #2E9E5B;
+  --fuente: "Barlow", Arial, sans-serif;
+}
+
+/* ===== Base ===== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--fondo);
+  font-family: var(--fuente);
+  color: var(--tinta);
+}
+
+p {
+  margin: 0;
+}
+
+main {
+  max-width: 100%;
+}
+
+/* ===== Tarjeta ===== */
+
+.credencial {
+  position: relative;
+  width: 640px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--linea);
+  border-radius: 16px;
+  background-color: var(--tarjeta);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.credencial:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* ===== Insignia ===== */
+
+.insignia {
+  position: absolute;
+  top: 22px;
+  right: 24px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: var(--amarillo);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* ===== Encabezado ===== */
+
+.encabezado {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 140px 12px 24px;
+}
+
+.logo {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--tinta);
+  color: var(--amarillo);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.empresa {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: var(--gris);
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.375rem;
+  line-height: 1.2;
+}
+
+/* ===== Bandera ===== */
+
+.bandera {
+  display: flex;
+  height: 6px;
+}
+
+.amarillo {
+  width: 50%;
+  background-color: var(--amarillo);
+}
+
+.azul {
+  width: 25%;
+  background-color: var(--azul);
+}
+
+.rojo {
+  width: 25%;
+  background-color: var(--rojo);
+}
+
+/* ===== Información ===== */
+
+.informacion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  padding: 18px 24px;
+}
+
+.foto {
+  position: relative;
+  flex-shrink: 0;
+  width: 118px;
+  height: 148px;
+  margin: 0;
+}
+
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 3px solid #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.foto::after {
+  content: "ONLINE";
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background-color: var(--verde);
+  color: #FFFFFF;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.datos {
+  width: 440px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.etiqueta {
+  font-size: 0.6875rem;
+  color: var(--gris);
+}
+
+.nombre {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px 16px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.8125rem;
+}
+
+.dato {
+  width: 210px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dato span {
+  color: var(--gris);
+}
+
+.dato a {
+  font-weight: 700;
+  color: var(--azul);
+  text-decoration: none;
+}
+
+.dato a:hover {
+  text-decoration: underline;
+}
+
+.icono {
+  width: 16px;
+  color: var(--azul);
+  text-align: center;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.icono:hover {
+  transform: scale(1.25);
+  color: var(--rojo);
+}
+
+/* ===== Pie ===== */
+
+.pie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 0 24px;
+  padding: 10px 0 14px;
+  border-top: 1px solid var(--linea);
+}
+
+.frase {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--azul);
+}
+
+.numero {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: var(--gris);
+}
